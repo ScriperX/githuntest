@@ -1,8 +1,24 @@
 from datetime import datetime
 
-name = input("Ingrese su numbre: ")
-time = str(datetime.now().strftime("%H:%M"))
+name = input("Ingrese su nombre: ")
 
-#actual_time = (if time )
+def get_greeting():
+    
+    time = datetime.now().strftime("%H:%M")
+    time = int(time.replace(':',''))
 
-print(f'Hola {name}! buena {time}')
+    if time < 1200:
+        return 'Buenos días'
+    elif 1200 <= time < 1800:
+        return 'Buenas tardes'
+    else: 
+        return 'Buenas noches'
+    
+
+#greeting = get_greeting()
+    
+print(f'Hola {name}! {greeting()}')
+
+
+
+#print(f'Hola {name}! {greeting}!')
