@@ -17,7 +17,6 @@ def get_greeting():
 
 #greeting = get_greeting()
     
-print(f'Hola {name}! {greeting()}')
 
 
 
